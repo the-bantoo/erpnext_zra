@@ -1,6 +1,6 @@
 ## ERPNext ZRA Integration
 
-Connects and syncs sales to Zambia Revenue Authorityty
+Smart Invoice compliance with Zambia Revenue Authority
 
 #### License
 

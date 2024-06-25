@@ -1,7 +1,7 @@
 app_name = "erpnext_zra"
 app_title = "ERPNext ZRA Integration"
-app_publisher = "Fabric and Collaborators"
-app_description = "Connects and syncs sales to Zambia Revenue Authorityty"
+app_publisher = "Fabric"
+app_description = "Smart Invoice compliance with Zambia Revenue Authority"
 app_email = "devs@fabricindustrial.com"
 app_license = "mit"
 # required_apps = []

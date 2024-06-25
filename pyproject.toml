@@ -1,9 +1,9 @@
 [project]
 name = "erpnext_zra"
 authors = [
-    { name = "Fabric and Collaborators", email = "devs@fabricindustrial.com"}
+    { name = "Fabric", email = "devs@fabricindustrial.com"}
 ]
-description = "Connects and syncs sales to Zambia Revenue Authorityty"
+description = "Smart Invoice compliance with Zambia Revenue Authority"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

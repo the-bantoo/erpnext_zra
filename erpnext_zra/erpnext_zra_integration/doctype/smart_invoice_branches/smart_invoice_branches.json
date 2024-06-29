@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:branch_name",
+ "creation": "2024-06-27 12:53:46.761565",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "branch_id",
+  "column_break_wsdm",
+  "branch_name",
+  "column_break_enjr",
+  "device_serial_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "branch_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wsdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_enjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_serial_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device Serial Number",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-27 12:59:29.982868",
+ "modified_by": "Administrator",
+ "module": "ERPNext ZRA Integration",
+ "name": "Smart Invoice Branches",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

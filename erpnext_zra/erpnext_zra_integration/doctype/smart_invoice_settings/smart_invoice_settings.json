@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_rename": 1,
+ "creation": "2024-06-26 19:43:19.168990",
+ "description": "Find the your settings on https://portal.zra.org.zm ",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_cjoh",
+  "column_break_nskk",
+  "enable_smart_invoice",
+  "column_break_kwek",
+  "testing_mode",
+  "section_break_upqp",
+  "tpin",
+  "live_server",
+  "column_break_dfap",
+  "api_key",
+  "development_server",
+  "section_break_ljat",
+  "table_ffbt"
+ ],
+ "fields": [
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dfap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cjoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kwek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tpin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "TPIN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "live_server",
+   "fieldtype": "Data",
+   "label": "Live Server",
+   "reqd": 1
+  },
+  {
+   "fieldname": "development_server",
+   "fieldtype": "Data",
+   "label": "Development Server",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "testing_mode",
+   "fieldtype": "Check",
+   "label": "Testing Mode"
+  },
+  {
+   "fieldname": "column_break_nskk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_smart_invoice",
+   "fieldtype": "Check",
+   "label": "Enable Smart Invoice"
+  },
+  {
+   "fieldname": "section_break_upqp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ljat",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_ffbt",
+   "fieldtype": "Table",
+   "options": "Smart Invoice Branches"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-06-27 13:00:29.093546",
+ "modified_by": "Administrator",
+ "module": "ERPNext ZRA Integration",
+ "name": "Smart Invoice Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

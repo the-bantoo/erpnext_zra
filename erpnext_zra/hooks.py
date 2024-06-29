@@ -122,13 +122,18 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+
+	"Sales Invoice": {
+		# "on_submit": "erpnext_zra_integration.modules.doctype.zra_invoice.zra_invoice.before_submit",
+		"on_update": "erpnext_zra.zra.submit_invoice" # for testing purposes
+	}
+}
 
 # Scheduled Tasks
 # ---------------

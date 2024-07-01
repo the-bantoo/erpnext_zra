@@ -48,6 +48,44 @@ class ZRAAPI:
         }
         response = requests.get(url, headers=headers)
         return response.json()
+    def get_device_status(self):
+        url = f"{self.BASE_URL}/device/status"
+        payload = {
+            "tpin": self.tpin,
+            "bhfId": self.branch_id,
+            "dvcSrlNo": self.device_serial_no
+        }
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {self.api_key}'
+        }
+        response = requests.post(url, data=json.dumps(payload), headers=headers)
+        return response.json()
+
+    def get_invoice_status(self, invoice_no):
+        url = f"{self.BASE_URL}/invoice/status"
+        payload = {
+            "invoiceNo": invoice_no
+        }
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {self.api_key}'
+        }
+        response = requests.post(url, data=json.dumps(payload), headers=headers)
+        return response.json()
+
+    def get_sales_summary(self, start_date, end_date):
+        url = f"{self.BASE_URL}/sales/summary"
+        payload = {
+            "startDate": start_date,
+            "endDate": end_date
+        }
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {self.api_key}'
+        }
+        response = requests.post(url, data=json.dumps(payload), headers=headers)
+        return response.json()
 
     # We Can Add other methods as required by the VSDC API
 def submit_invoice():
@@ -90,6 +128,7 @@ def get_invoice_data(self):
         "totalDiscount": self.total_discount,
         "paymentType": self.payment_type,
         "currency": self.currency,
-        "exchangeRate": self.conversion_rate
+        "exchangeRate": self.conversion_rate,
+        "remarks": self.remarks
     }
     return invoice_data

@@ -1,8 +1,43 @@
-import requests, frappe
+import requests #, frappe
 import json
 
+
+def initialize_device(base_url, tpin, bhf_id, dvc_srl_no):
+    url = f"{base_url}/initializer/selectInitInfo"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "tpin": tpin,
+        "bhfId": bhf_id,
+        "dvcSrlNo": dvc_srl_no
+    }
+    
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+        response.raise_for_status()  # Raise an HTTPError for bad responses
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error during request: {e}")
+        return None
+
+if __name__ == "__main__":
+    # Replace these values with your actual values
+    base_url = "http://localhost:8080/zrasandboxvsdc"
+    tpin = "2295829289"
+    bhf_id = "000"
+    dvc_srl_no = "2295829289_VSDC"
+    
+    result = initialize_device(base_url, tpin, bhf_id, dvc_srl_no)
+    
+    if result:
+        print(json.dumps(result, indent=4))
+    else:
+        print("Initialization failed")
+
+
 class ZRAAPI:
-    BASE_URL = 
+    BASE_URL = "https://localhost:8080/zrasandboxvsdc"
 
     def __init__(self, api_key, device_serial_no, branch_id, tpin):
         self.api_key = api_key
